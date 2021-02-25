@@ -8,10 +8,10 @@
 2. Create a Hologram\
    `holoManager.createHolo(Location, Persitency, Exact, Small, Text)`
    
-3. Start Manager in `onEnable()`
+3. Start Manager in `onEnable()`\
    `holoManager.start()`
 
-4. End Manager in `onDisable()`
+4. End Manager in `onDisable()`\
    `holoManager.end()`
 
 > **Location**: The Location where you want to Spawn the Hologram\
