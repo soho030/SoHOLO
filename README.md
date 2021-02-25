@@ -13,3 +13,5 @@
 > **Exact** _(Boolean)_: If you want the Location to be exact or a rounded version (in the middle of a block)\
 > **Small** _(Boolean)_: Size of the ArmorStand
 > **Text** _Strings_: The Text, automatically splitted and Color Code supported
+
+**Be aware that this API creates it's own config in order to save Holograms. If you however wish to not create this you can still use this api execept the persistency part.**
