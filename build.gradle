@@ -1,0 +1,47 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.4.21'
+
+    id 'com.github.johnrengelman.shadow' version '6.0.0' //Shadow
+}
+
+group 'de.sohotek'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    jcenter()
+    maven { url 'https://jitpack.io' }
+
+    //Spigot
+    maven {
+        url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
+        content {
+            includeGroup 'org.bukkit'
+            includeGroup 'org.spigotmc'
+        }
+    }
+    maven {
+        url = 'https://oss.sonatype.org/content/repositories/snapshots'
+    }
+
+    maven {
+        url = 'http://repo.md-5.net/content/groups/public'
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+
+    compileOnly "org.spigotmc:spigot:1.16.5-R0.1-SNAPSHOT" //Spigot
+    compile 'net.axay:KSpigot:v1.16.5_R23' //KSpigot
+}
+
+test {
+    useJUnitPlatform()
+}
+
+libsDirName = "C:\\Users\\phili\\Documents\\01 - Minecraft\\00 - Server\\1.16_Server\\plugins"
