@@ -16,7 +16,7 @@ class HoloManager(plugin: JavaPlugin) {
     private val holos = hashMapOf<String, Holo>()
 
     fun start() {
-        if (config.contains("holos")) {
+        if (config.getConfigurationSection("holos") != null) {
             val configHolos = config.getConfigurationSection("holos")!!.getKeys(false)
             println(configHolos.size)
             for (i in configHolos) {
